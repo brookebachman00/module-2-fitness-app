@@ -1,0 +1,35 @@
+<h1>Add A Class</h1>
+<body>
+<%= form_for @schedule do |s| %>
+    <%= s.label "Class Name" %><br>
+<%= s.text_field :class_name %><br>
+<%= s.label "Class Size" %><br>
+<%= s.number_field :class_size %><br>
+<%= s.label "Class Type" %><br>
+<%= s.text_field :class_type %><br>
+<%= s.label "Class Length" %><br>
+<%= s.number_field :class_length %><br>
+<%= s.label "Class Date and Time" %><br>
+<%= s.date_select :class_time %><br>
+<%= s.label "Coach Name" %><br>
+<%= s.collection_select :coach_id, Coach.all, :id, :name %><br>
+<%= s.submit 'Add Your Class'%>
+<% end %> 
+</body>
+
+<style>
+h1 {
+  color: cadetblue;
+  font-family: impact;
+  font-size: 280%;
+  text-align: center;
+}
+
+body{
+    color: cadetblue;
+    font-family: impact;
+    font-size: 160%;
+  text-align: center;
+  background-color: ;
+
+}

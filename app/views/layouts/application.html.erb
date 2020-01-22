@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fitness</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <nav>
+  <li><a href="/coaches">Coaches</a></li>
+  <li><a href="/diets">Diets</a></li>
+  <li><a href="/workouts">Workouts</a></li>
+</nav>
+
+
+
+<style>
+h1 {
+  color: cadetblue;
+  font-family: impact;
+  font-size: 350%;
+  text-align: center;
+}
+
+body{
+    color: cadetblue;
+    font-family: impact;
+    font-size: 200%;
+  text-align: center;
+  background-color: ;
+
+}
+
+
+    <%= yield %>
+  </body>
+
+
+
+  </html>
+nav {
+  list-style-type: none;
+  margin: 3;
+  padding: 1;
+}

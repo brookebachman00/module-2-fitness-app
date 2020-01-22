@@ -1,0 +1,21 @@
+<h1>Your Diet</h1>
+
+<label> Diet Name: </label></br>
+    <%= @diet.name  %></br>
+   
+    <label> Diet Recipe: </label> 
+
+    <br><%= @diet.recipe  %></br>
+
+    <label> Diet Description: </label> 
+
+    <br><%= @diet.description  %></br>
+   
+   
+    </li>
+    </ul>
+    <br></br>
+
+   <%=link_to "Edit Your Diet", edit_diet_path(@diet) %>
+
+    <br><%= button_to "Delete This", @diet, :method => :delete %></br>

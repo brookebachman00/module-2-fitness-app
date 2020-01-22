@@ -1,0 +1,33 @@
+<h1>Your schedule</h1>
+<h1>Employee Name</h1>
+
+<label> Class Name: </label></br>
+    <%= @schedule.class_name  %></br>
+   
+    <label> Class Type: </label> 
+
+    <br><%= @schedule.class_type  %></br>
+
+    <label> Class Time: </label> 
+
+    <br><%= @schedule.class_time  %></br>
+   
+    <label> Class Size </label>
+    <br><%= @schedule.class_size  %></br>
+   
+    <label> Class Length </label>
+    <br><%= @schedule.class_length %></br>
+   
+    <label> Coach Id </label>
+    <br><%= @schedule.coach_id  %></br>
+   
+    <label> User Id </label>
+        <%= @schedule.user_id %>
+        
+    </li>
+    </ul>
+    <br></br>
+
+   <%=link_to "Edit Your Schedule", edit_schedule_path(@schedule) %>
+
+    <br><%= button_to "Delete This", @schedule, :method => :delete %></br>
