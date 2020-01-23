@@ -1,0 +1,13 @@
+<h1>Your Recipes</h1>
+<body>
+
+<ul>
+<% @recipes.each do |recipe|  %>
+<h3><%= link_to recipe.name, recipe %><br></h3>
+<%=  coach.bio %><br>
+
+
+
+</ul>
+<% end %>
+</body>

@@ -2,16 +2,16 @@ class CoachesController < ApplicationController
 
     def new 
         @coach = Coach.new
-
     end
 
     def show
         @coach = Coach.find(params[:id])
-
     end
 
     def index
         @coaches = Coach.all
+        @count = Coach.all.length
+       
     end
 
     def create
@@ -25,7 +25,8 @@ class CoachesController < ApplicationController
     end
 
     def coach_params
-        params.require(:coach).permit(:name, :bio, :diet_id)
+        params.require(:coach).permit(:name, :bio, :diet_id, :phone, :address, :company, :url, :img)
     end
 
 end
+

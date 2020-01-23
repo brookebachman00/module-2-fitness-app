@@ -5,8 +5,10 @@
 <%= f.text_field :name, :size => "45" %><br>
 <label> Bio </label><br>
 <%= f.text_area :bio, cols: "45", rows: "10" %><br>
-<label> Diet </label><br>
-<%= f.collection_select :diet_id, Diet.all, :id, :name %><br>
+<label> Add a Photo </label><br>
+<%= f.text_area :img, cols: "45", rows: "10" %><br>
+<label> Add Your Website </label><br>
+<%= f.text_area :url, cols: "45", rows: "10" %><br>
 <div class="actions"><%= f.submit "Submit your coach!", :class => "button" %>
 </div>
 <% end %>

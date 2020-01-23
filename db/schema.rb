@@ -10,21 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_024308) do
+ActiveRecord::Schema.define(version: 2020_01_23_031543) do
 
   create_table "coaches", force: :cascade do |t|
     t.string "name"
+    t.integer "diet_id"
     t.string "bio"
     t.string "img"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
+    t.integer "phone"
+    t.string "address"
+    t.string "company"
   end
 
   create_table "diets", force: :cascade do |t|
     t.string "name"
-    t.string "bio"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.integer "diet_id", null: false
+    t.string "img"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.index ["diet_id"], name: "index_recipes_on_diet_id"
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -41,6 +54,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_024308) do
     t.index ["user_id_id"], name: "index_schedules_on_user_id_id"
   end
 
+  add_foreign_key "recipes", "diets"
   add_foreign_key "schedules", "coach_ids"
   add_foreign_key "schedules", "user_ids"
 end

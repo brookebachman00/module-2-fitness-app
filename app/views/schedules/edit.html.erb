@@ -1,5 +1,5 @@
 <h1>Update Your Schedule</h1>
-<body>
+
 <%= form_for @schedule do |s| %>
     <%= s.label "Class Name" %><br>
 <%= s.text_field :class_name %><br>
@@ -13,24 +13,7 @@
 <%= s.date_select :class_time %><br>
 <%= s.label "Coach Name" %><br>
 <%= s.collection_select :coach_id, Coach.all, :id, :name %><br>
+<% s.submit "Update Your Schedule" %>
 <% end %> 
-</body>
 
-<style>
-h1 {
-  color: cadetblue;
-  font-family: impact;
-  font-size: 280%;
-  text-align: center;
-}
 
-body{
-    color: cadetblue;
-    font-family: impact;
-    font-size: 160%;
-  text-align: center;
-  background-color: ;
-
-}
-
-<% end %>

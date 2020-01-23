@@ -11,40 +11,99 @@
 
   <body>
 
-  <nav>
-  <li><a href="/coaches">Coaches</a></li>
-  <li><a href="/diets">Diets</a></li>
-  <li><a href="/workouts">Workouts</a></li>
-</nav>
 
 
 
 <style>
-h1 {
-  color: cadetblue;
-  font-family: impact;
-  font-size: 350%;
-  text-align: center;
-}
+  h1 {
+    color: steelblue;
+    font-family: impact;
+    font-size: 250%;
+    text-align: center;
+  }
 
-body{
-    color: cadetblue;
+  h2 {
+    color: goldenrod;
     font-family: impact;
     font-size: 200%;
-  text-align: center;
-  background-color: ;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    margin-left: 80px;
+  }
 
+  h3 {
+    color: rosybrown;
+    font-family: arial black;
+    font-size: 180 %;
+    text-align: left;
+  }
+  h4 {
+      color: burlywood
+      font-family: arial black;
+      font-size: 190%;
+      text-align: center;
+     
+  }
+
+  h5 {
+      color: olive;
+      display: inline-block;
+    
+  }
+
+  body{
+
+    font-weight: bold;
+      color: darkseagreen;
+      font-family: verdana;
+      font-size: 168%;
+    text-align: left;
+    background-color: whitesmoke ;
+    
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 200px;
+  margin-left: 100px;
+  }
+
+  nav {
+    list-style-type: none;
+    margin: 3;
+    padding: 1;
+  }
+
+  p {
+    text-align: center;
+  }
+
+div class="green text" {
+  color: olivedrab;
+}
+
+.coach {
+  color: darksalmon;
+  font-family: verdana;
+  font-size: 125;
+  display: inline-block;
 }
 
 
+.button{
+  background-color: gainsboro;
+  color: cadetblue;
+  width: 150px;
+  height: 65px;
+  font-size: 17px;
+  font-family: impact;
+  border: 3px solid powderblue;
+  border-radius: 8px;
+
+
+
+</style>
     <%= yield %>
   </body>
-
-
-
   </html>
-nav {
-  list-style-type: none;
-  margin: 3;
-  padding: 1;
-}

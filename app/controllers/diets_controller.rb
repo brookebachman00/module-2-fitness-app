@@ -1,4 +1,8 @@
 class DietsController < ApplicationController
+    
+    def index
+        @diets = Diet.all
+    end
 
     def new 
         @diet = Diet.new
@@ -17,9 +21,8 @@ class DietsController < ApplicationController
         end
     end
     
-    def index
-        @diets = Diet.all(diet_params)
-    end
+
+    private
 
     def diet_params
         params.require(:diet).permit(:name, :description)
