@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   root 'coaches#index'
 
   resources :diets  #get '/diets', to: 'diets#show', as: 'diet_info'

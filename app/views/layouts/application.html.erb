@@ -2,17 +2,21 @@
 <html>
   <head>
     <title>Fitness</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  
+  <header class= "header-site"> 
+        <h1 id="title">
+        <span id="outfit-link">Coaches</span> |
+            <span id="add-outfit-link">Diets</span> |
+            <span id="all-clothes-link" link_to '/recipes/index '>Recipes</span> |
+            <span id="clothes-link">Workouts</span>
+        
+        
+            
+        </h1>
+        
+    </header> 
 
   <body>
-
-
-
 
 <style>
   h1 {
@@ -25,24 +29,25 @@
   h2 {
     color: goldenrod;
     font-family: impact;
-    font-size: 200%;
+    font-size: 100%;
     text-align: left;
     margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 200px;
     margin-left: 80px;
+    font-style: italic;
   }
 
   h3 {
     color: rosybrown;
     font-family: arial black;
-    font-size: 180 %;
+    font-size: 120 %;
     text-align: left;
   }
   h4 {
       color: burlywood
       font-family: arial black;
-      font-size: 190%;
+      font-size: 190% ;
       text-align: center;
      
   }
@@ -53,14 +58,28 @@
     
   }
 
+  #title {
+    font-size: 100%;
+    color: indianred;
+      
+    font-size: 100%;
+    margin: 3;
+    padding: 1;
+  }
+
+
   body{
 
     font-weight: bold;
       color: darkseagreen;
       font-family: verdana;
-      font-size: 168%;
+      font-size: 118%;
     text-align: left;
     background-color: whitesmoke ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  
     
 
   margin-top: 100px;
@@ -70,13 +89,14 @@
   }
 
   nav {
-    list-style-type: none;
-    margin: 3;
-    padding: 1;
+    list-style-type: none ;
+    margin: 3 ;
+    padding: 1 ;
   }
 
   p {
     text-align: center;
+    font-size: 100% ;
   }
 
 div class="green text" {
@@ -86,7 +106,7 @@ div class="green text" {
 .coach {
   color: darksalmon;
   font-family: verdana;
-  font-size: 125;
+  font-size: 100%;
   display: inline-block;
 }
 

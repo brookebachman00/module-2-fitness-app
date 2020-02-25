@@ -25,6 +25,6 @@ class DietsController < ApplicationController
     private
 
     def diet_params
-        params.require(:diet).permit(:name, :description)
+        params.require(:diet).permit(:name, :description, :url, :img)
     end
 end

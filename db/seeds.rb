@@ -3,6 +3,9 @@ Coach.destroy_all
 Recipe.destroy_all
 Diet.destroy_all
 
+
+train1=Train.new(user3, workout_id, coach2)
+
 diet1 = Diet.create!(name: "Paleo", description: "This diet requires you to consume only meat, vegetables and fat products. No simple carbs allowed. It has helped many people shed weight quickly, but can be hard to sustain.")
 
  diet2 = Diet.create!(name: "Mediterranean", description: "This diet is a way of eating based on the traditional cuisine of countries bordering the Mediterranean Sea. While there is no single definition of the Mediterranean diet, it is typically high in fish, vegetables, fruits, whole grains, beans, nut and seeds, and olive oil. ")
@@ -21,7 +24,7 @@ coach2 = Coach.create!(name: "Alexandria", bio: "Alexandria works at Fitness SF 
 
 coach3 = Coach.create!(name: "Paul", bio: "Paul is an endurance athlete and trainer. He competes in bike races around the Bay Area. You can find him at Endurance PTC. He trains individuals who want to better their cardio and strength.", img: "/coaches/biking_endurance_coach.png", diet: diet3, url: "https://www.enduranceptc.com/staff/#2", phone: 4153809629, address: "8 Madrona Street, Mill Valley, Ca, 94941", company: "Endurance PTC")
 
-coach4 = Coach.create!(name: "Anthony", bio: "Mikel works at FitnessSF as a crossfit trainer. He will teach you how to olympic lift with excellent form. He does personal training as well as classes. ",  img: "/coaches/anthony.png", diet: diet4, url: "http://jbodyworks.com/coach-anthony-chiechi/", phone: 4157660366, address: "410 Brannan Street, San Francisco, Ca, 94107", company: "J Bodyworks")
+coach4 = Coach.create!(name: "Anthony", bio: "Anthony works at JBodyworks as a crossfit trainer. He will teach you how to olympic lift with excellent form. He does personal training as well as classes. ",  img: "/coaches/anthony.png", url: "http://jbodyworks.com/coach-anthony-chiechi/", phone: 4157660366, address: "410 Brannan Street, San Francisco, Ca, 94107", company: "J Bodyworks")
 
 coach5 = Coach.create!(name: "Maria", bio: "Maria will help you build lean muscle while losing fat. She is known for amazing body transformations and you can find her at FitnessSF where she has been a trainer for the past 2 years.", img: "/coaches/maria_weightloss.png", diet: diet5, url: "https://www.fitnesssf.com/location/mid-market/", phone: 4153486377, address: "1 10th Street, San Francisco, Ca, 94103", company: "Fitness SF")
 
@@ -86,6 +89,8 @@ recipe28 = Recipe.create!(name:"Keto Mac N Cheese", diet: diet5, img:'/keto/mac_
 recipe29 = Recipe.create!(name:"Keto Ranch Chicken", diet: diet5, img:'/keto/ranch_chicken.jpg', url: "https://www.delish.com/cooking/recipe-ideas/a27156187/cheesy-bacon-ranch-chicken-reipe/")
 
 recipe30 = Recipe.create!(name:"Keto Meatballs", diet: diet5, img:'/keto/meatballs.jpg', url: "https://www.delish.com/cooking/recipe-ideas/a25238990/keto-meatballs-recipe/")
+
+workout1= Workout.create!()
 
 
 
