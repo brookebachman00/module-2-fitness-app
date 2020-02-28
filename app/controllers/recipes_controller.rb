@@ -1,5 +1,9 @@
 class RecipesController < ApplicationController
 
+    before_action :authenticate_user!
+    skip_before_action :authenticate_user!, only: [:index]
+ 
+
     def new 
         @recipe = Recipe.new
     end
@@ -9,6 +13,7 @@ class RecipesController < ApplicationController
     end
 
     def create
+        
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
             redirect to recipes_path(@recipe)
@@ -24,6 +29,6 @@ class RecipesController < ApplicationController
     private
 
     def recipe_params
-        params.require(:recipe).permit(:name, :diet_id :img, :url)
+        params.require(:recipe).permit(:name, :diet_id, :img, :url)
     end
 end

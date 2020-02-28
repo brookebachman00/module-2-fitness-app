@@ -1,11 +1,15 @@
 class DietsController < ApplicationController
     
-    def index
-        @diets = Diet.all
-    end
+    before_action :authenticate_user!
+    skip_before_action :authenticate_user!, only: [:index]
+   
 
     def new 
         @diet = Diet.new
+    end
+
+    def index
+        @diets = Diet.all
     end
 
     def show
@@ -13,6 +17,7 @@ class DietsController < ApplicationController
     end
 
     def create
+        
         @diet = Diet.new(diet_params)
         if @diet.save
             redirect to diets_path(@diet)

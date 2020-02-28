@@ -1,5 +1,8 @@
 <h1>Your Coaches</h1>
 
+<% if !!flash[:success] == true  %>
+<h2><%= flash[:success] %></h2>
+<% end %>
 <h2><%="There are currently #{@count} coaches" %></h2>
 
 <ul>

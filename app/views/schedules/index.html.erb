@@ -3,9 +3,10 @@
 
 <ul>
 <% @schedules.each do |c|  %>
-<li><%=  c.bio %><br></li>
-<li><%=  c.diet.name %><br></li>
-<li><%=  c.diet.description %><br></li>
+<p><%=  c.class_name %><br></p>
+<p><%=  c.class_type %><br></p>
+<p><%=  c.class_time %><br></p>
+<p> <%=  c.class_size %></p><br>
+<p> <%=  c.class_length %></p><br>
 
-</ul>
 <% end %>

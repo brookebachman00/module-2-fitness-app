@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
   
-  root 'coaches#index'
+  root 'users#new'
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
-  resources :diets  #get '/diets', to: 'diets#show', as: 'diet_info'
+  
+  resources :diets  
   resources :workouts
   resources :users
   resources :coaches

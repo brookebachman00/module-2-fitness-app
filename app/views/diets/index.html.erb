@@ -1,9 +1,11 @@
-<h1> The Available Diets </h1>
-
+<h1> Available Diets </h1>
+<% if !!flash[:success] == true  %>
+<h2><%= flash[:success] %></h2>
+<% end %>
 <ul>
 <% @diets.each do |diet| %>
-    <%= link_to diet.name, diet %> 
-    <li><%= diet.description  %></li>
+ <h3 id="diet" > ❃ <%= link_to diet.name, diet %> ❃ </h3>
+    <h3 id="diet-info"><%= diet.description  %></h3>
 <% end %>
 
 </ul>

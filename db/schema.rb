@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_031543) do
+ActiveRecord::Schema.define(version: 2020_02_25_232429) do
 
   create_table "coaches", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_23_031543) do
   create_table "diets", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -43,18 +44,26 @@ ActiveRecord::Schema.define(version: 2020_01_23_031543) do
   create_table "schedules", force: :cascade do |t|
     t.string "class_name"
     t.integer "class_size"
-    t.integer "coach_id_id", null: false
-    t.integer "user_id_id", null: false
+    t.integer "coach_id", null: false
+    t.integer "user_id", null: false
     t.string "class_type"
     t.integer "class_length"
     t.datetime "class_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["coach_id_id"], name: "index_schedules_on_coach_id_id"
-    t.index ["user_id_id"], name: "index_schedules_on_user_id_id"
+    t.index ["coach_id"], name: "index_schedules_on_coach_id"
+    t.index ["user_id"], name: "index_schedules_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "recipes", "diets"
-  add_foreign_key "schedules", "coach_ids"
-  add_foreign_key "schedules", "user_ids"
+  add_foreign_key "schedules", "coaches"
+  add_foreign_key "schedules", "users"
 end
