@@ -1,21 +1,30 @@
-<h1>Your Diet</h1>
 
-<label> Diet Name: </label></br>
-    <%= @diet.name  %></br>
+
+
+       <h1> <%= @diet.name %></h1>
+
+       <h3><%= @diet.description %><br></h3>
+
+       
+       <h4> __________________________________________________________</h4><br>
+
+        <% @diet.recipes.each do |recipe| %>
+
+            <label> Recipe Name: </label>
+
+            <%= link_to recipe.name, recipe.url, target: "_blank" %>
+
+           <p> <img src=<%= recipe.img %> height='350px' width='350px'></p>
+
+           
+        
+        <% end %>
+    
    
-    <label> Diet Recipe: </label> 
 
-    <br><%= @diet.recipe  %></br>
 
-    <label> Diet Description: </label> 
 
-    <br><%= @diet.description  %></br>
+
+
    
-   
-    </li>
-    </ul>
-    <br></br>
-
-   <%=link_to "Edit Your Diet", edit_diet_path(@diet) %>
-
-    <br><%= button_to "Delete This", @diet, :method => :delete %></br>
+    

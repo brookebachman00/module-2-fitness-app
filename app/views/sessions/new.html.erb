@@ -1,0 +1,19 @@
+<% if !!flash[:warning] == true  %>
+<h2><%= flash[:warning] %></h2>
+<% end %>
+
+<h1>Login</h1>
+<h3>
+<%= form_tag '/login', method: :post do %>
+ <div>
+  <%= label_tag :email %>
+  <%= text_field_tag :email%>
+ </div>
+ <div>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+ </div>
+  <%= submit_tag "Submit" %>
+
+<%end%>
+</h3>

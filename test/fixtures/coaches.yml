@@ -3,9 +3,11 @@
 one:
   name: MyString
   bio: MyString
-  diet: one
+  diet_id: 1
+  img: MyString
 
 two:
   name: MyString
   bio: MyString
-  diet: two
+  diet_id: 1
+  img: MyString

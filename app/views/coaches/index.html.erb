@@ -1,32 +1,22 @@
 <h1>Your Coaches</h1>
-<body>
+
+<% if !!flash[:success] == true  %>
+<h2><%= flash[:success] %></h2>
+<% end %>
+<h2><%="There are currently #{@count} coaches" %></h2>
 
 <ul>
-<% @coaches.each do |c|  %>
-<li><%=  c.bio %><br></li>
-<li><%=  c.diet.name %><br></li>
-<li><%=  c.diet.description %><br></li>
+<% @coaches.each do |coach|  %>
+<h3><%= link_to coach.name, coach %><br></h3>
+<p class="coach"><%=  coach.company %><br></p>
+<%=  coach.bio %><br>
+<p><img src=<%= coach.img %> height='315px' width='350px'></p>
+
+
+
+
 
 </ul>
 <% end %>
-</body>
 
 
-<link rel="stylesheet" href="main.css"
-
-<style>
-h1 {
-  color: cadetblue;
-  font-family: impact;
-  font-size: 280%;
-  text-align: center;
-}
-
-body{
-    color: cadetblue;
-    font-family: impact;
-    font-size: 160%;
-  text-align: center;
-  background-color: ;
-
-}

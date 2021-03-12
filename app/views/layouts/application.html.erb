@@ -1,50 +1,153 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fitness</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    
+  
+  <header class= "header-site"> 
+        
+        <nav id="title">
+            <%= link_to "Diets |", '/diets' %> 
+            <%= link_to "Recipes |", '/recipes' %>
+            <%= link_to "Coaches |", '/coaches' %> 
+            <%= link_to "Signup |", '/signup' %> 
+            <%= link_to "Login |", '/login' %> 
+            <%= link_to "Logout", '/logout' %> 
+        </nav>
+        <img src="/pics/trying.png" alt="everyday wellness">
+    </header> 
 
   <body>
 
-  <nav>
-  <li><a href="/coaches">Coaches</a></li>
-  <li><a href="/diets">Diets</a></li>
-  <li><a href="/workouts">Workouts</a></li>
-</nav>
-
-
 
 <style>
-h1 {
-  color: cadetblue;
-  font-family: impact;
-  font-size: 350%;
-  text-align: center;
-}
-
-body{
-    color: cadetblue;
-    font-family: impact;
+  h1 {
+    padding-top: 0px;
+    color: #9B8884;
+    font-family: bodoni;
     font-size: 200%;
-  text-align: center;
-  background-color: ;
+    text-align: center;
+    position: relative;
+  }
 
+  h2 {
+    color: e0a09c;
+    font-family: bodoni;
+    font-size: 180%;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    margin-left: 80px;
+    font-style: italic;
+  }
+
+  h3 {
+    color: #bda371 ;
+    font-family: bodoni;
+    font-size: 120 %;
+    text-align: center;
+  }
+  h4 {
+      color: ffcccc
+      font-family: bodoni;
+      font-size: 190% ;
+      text-align: center;
+     
+  }
+
+  h5 {
+      color: ffcccc;
+      display: inline-block;
+    
+  }
+
+  #title 
+  {
+    text-align: center;
+    
+    font-size: 20px;
+    
+    
+    
+  }
+
+  #diet {
+    text-align: left;
+    font-size: 125%;
+  }
+
+  #diet-info {
+    font-size: 147%;
+    color: #d99b97;
+    font-style: italic;
+  }
+
+  header {
+    margin: auto;
+    position: relative;
+    width: 100vw ;
+    height: 450px;
+    text-align: center;
+    display: block;
+    padding: 5px;
+    
+  }
+
+
+  a {
+    text-decoration: none;
+    color: #87afb5;
+  }
+
+  body{
+
+    font-weight: bold;
+      color: darkseagreen;
+      font-family: bodoni;
+      font-size: 128%;
+    
+    background-color: #e6e0e0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+    
+  nav {
+    list-style-type: none ;
+    margin: 3 ;
+    padding: 1 ;
+  }
+
+  p {
+    text-align: center;
+    font-size: 100% ;
+  }
+
+div class="green text" {
+  color: olivedrab;
+}
+
+.coach {
+  color: #d19592;
+  font-family: bodoni;
+  font-size: 100%;
+  display: inline-block;
 }
 
 
+.button{
+  background-color: whitesmoke;
+  color: cadetblue;
+  width: 150px;
+  height: 65px;
+  font-size: 17px;
+  font-family: bodoni MT;
+  border: 3px solid powderblue;
+  border-radius: 8px;
+
+
+
+</style>
     <%= yield %>
   </body>
-
-
-
   </html>
-nav {
-  list-style-type: none;
-  margin: 3;
-  padding: 1;
-}
